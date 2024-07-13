@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Images Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section {
+        
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        /* Image 1: Scroll left to right */
+        .scroll-image {
+            animation: scrollLeftToRight 5s linear infinite;
+        }
+
+        @keyframes scrollLeftToRight {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateY(200px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Image 2: Rotate on hover */
+        .rotate-image:hover {
+            transform: rotate(360deg);
+            transition-duration: 3s;
+        }
+
+        /* Image 3: Zoom on hover */
+        .zoom-image:hover {
+            transform: scale(1.5);
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem Ipsum</h1>
+
+    <div class="section">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="image-container">
+            <img class="scroll-image" src="/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.avif" alt="Scroll Image" >
+        </div>
+    </div>
+
+    <div class="section" style="margin-top: 50px;">
+        <div class="image-container">
+            <img class="rotate-image" src="/clock-4314041_1280.webp" alt="Rotate Image">
+        </div>
+    </div>
+
+    <div class="section" style="margin-top: 50px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="image-container">
+            <img class="zoom-image" src="/batman-8510022_640.webp" alt="Zoom Image">
+        </div>
+    </div>
+</body>
+</html>
